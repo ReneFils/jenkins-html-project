@@ -19,7 +19,7 @@ pipeline {
         stage('Docker Build') { 
             steps { 
                 echo 'Building Docker image' 
-                bat 'docker build -t my-html-website:latest .' 
+                bat 'docker build -t jenkins-html-project:latest .' 
             } 
         } 
  
@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying HTML website' 
                 bat ''' 
                 docker rm -f my-html-container 2>NUL 
-                docker run -d --name my-html-container -p 8081:80 my-html-website:latest 
+                docker run -d --name my-html-container -p 8082:80 jenkins-html-project:latest 
                 ''' 
             } 
         } 
