@@ -42,3 +42,4 @@ pipeline {
             echo 'Deployment failed. Check the console output.' 
         } 
     } 
+}
