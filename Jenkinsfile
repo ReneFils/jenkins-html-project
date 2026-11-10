@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying HTML website' 
                 bat ''' 
                 docker rm -f my-html-container 2>NUL 
-                docker run -d --name my-html-container -p 8082:80 jenkins-html-project:latest 
+                docker run -d --name my-html-container -p 8083:80 jenkins-html-project:latest 
                 ''' 
             } 
         } 
