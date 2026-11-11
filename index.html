@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Discover Northstar University, explore our courses, and find information for future students." />
-    <title>Northstar University | Find Your Way Forward</title>
+    <meta name="description" content="Welcome to Ngoma College. Explore our programs, campus community, and opportunities for learning." />
+    <title>Ngoma College | Learn, Grow, Lead</title>
     <style>
         :root {
-            --ink: #17251f;
-            --green: #164b3b;
-            --green-light: #e8f0e9;
-            --cream: #f7f6f0;
-            --paper: #fffefa;
-            --gold: #d7a64b;
-            --muted: #68756d;
-            --line: #e4e6dd;
+            --navy: #102b53;
+            --blue: #1d5fbf;
+            --blue-light: #eaf3ff;
+            --sky: #80b7f4;
+            --ink: #1b2b43;
+            --muted: #64748b;
+            --white: #fff;
+            --surface: #f5f9ff;
+            --line: #dce7f5;
             --serif: Georgia, "Times New Roman", serif;
             --sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -25,15 +26,15 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 88px;
         }
 
         body {
             margin: 0;
-            background: var(--cream);
+            background: var(--white);
             color: var(--ink);
             font-family: var(--sans);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         a {
@@ -41,7 +42,7 @@
         }
 
         a:focus-visible {
-            outline: 3px solid var(--gold);
+            outline: 3px solid var(--sky);
             outline-offset: 4px;
         }
 
@@ -54,14 +55,14 @@
             position: sticky;
             z-index: 5;
             top: 0;
-            background: rgba(247, 246, 240, 0.96);
-            border-bottom: 1px solid rgba(23, 37, 31, 0.09);
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
         }
 
         .header-inner {
-            min-height: 82px;
             display: flex;
+            min-height: 82px;
             align-items: center;
             justify-content: space-between;
             gap: 24px;
@@ -76,28 +77,29 @@
 
         .brand-mark {
             display: grid;
-            width: 43px;
-            height: 43px;
+            width: 44px;
+            height: 44px;
             place-items: center;
             border-radius: 50%;
-            background: var(--green);
-            color: white;
+            background: var(--navy);
+            color: var(--white);
             font-family: var(--serif);
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             font-weight: 700;
         }
 
         .brand-name {
             display: block;
+            color: var(--navy);
             font-family: var(--serif);
-            font-size: 1.08rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.2;
         }
 
-        .brand-subtitle {
+        .brand-tagline {
             display: block;
-            margin-top: 4px;
+            margin-top: 3px;
             color: var(--muted);
             font-size: 0.65rem;
             letter-spacing: 0.13em;
@@ -107,50 +109,47 @@
         .navigation {
             display: flex;
             align-items: center;
-            gap: clamp(18px, 3vw, 38px);
+            gap: clamp(18px, 3vw, 36px);
         }
 
         .navigation a {
-            color: #435149;
+            color: #43536b;
             font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
-            transition: color 160ms ease;
         }
 
         .navigation a:hover {
-            color: var(--green);
+            color: var(--blue);
         }
 
         .navigation .nav-cta {
-            padding: 11px 18px;
+            padding: 10px 17px;
             border-radius: 4px;
-            background: var(--green);
-            color: white;
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .navigation .nav-cta:hover {
+            background: var(--navy);
+            color: var(--white);
         }
 
         .hero {
-            position: relative;
             display: grid;
-            min-height: 570px;
-            grid-template-columns: 1fr 0.92fr;
+            min-height: 550px;
+            grid-template-columns: 1fr 0.95fr;
             align-items: center;
-            gap: 54px;
-            padding-top: 64px;
-            padding-bottom: 70px;
-        }
-
-        .hero-copy {
-            position: relative;
-            z-index: 1;
-            padding: 12px 0 24px;
+            gap: 56px;
+            padding-top: 58px;
+            padding-bottom: 64px;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            color: var(--green);
+            color: var(--blue);
             font-size: 0.75rem;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -158,9 +157,9 @@
         }
 
         .eyebrow::before {
-            width: 28px;
+            width: 26px;
             height: 2px;
-            background: var(--gold);
+            background: var(--sky);
             content: "";
         }
 
@@ -172,23 +171,24 @@
         }
 
         h1 {
-            max-width: 620px;
-            margin: 22px 0 20px;
+            max-width: 610px;
+            margin: 20px 0 18px;
+            color: var(--navy);
             font-family: var(--serif);
-            font-size: clamp(3rem, 6vw, 5.2rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 500;
             letter-spacing: -0.055em;
             line-height: 1.04;
         }
 
         h1 span {
-            color: var(--green);
+            color: var(--blue);
             font-style: italic;
         }
 
         .hero-copy > p {
             max-width: 510px;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
             color: var(--muted);
             font-size: 1.05rem;
         }
@@ -200,10 +200,10 @@
             justify-content: center;
             gap: 10px;
             padding: 12px 20px;
-            border: 1px solid var(--green);
+            border: 1px solid var(--blue);
             border-radius: 4px;
-            background: var(--green);
-            color: white;
+            background: var(--blue);
+            color: var(--white);
             font-size: 0.9rem;
             font-weight: 700;
             text-decoration: none;
@@ -212,19 +212,19 @@
 
         .button:hover {
             transform: translateY(-2px);
-            background: #103c2f;
+            background: var(--navy);
         }
 
         .hero-art {
             position: relative;
             display: grid;
-            min-height: 400px;
+            min-height: 390px;
             place-items: center;
             overflow: hidden;
             border-radius: 48% 48% 4px 4px;
             background:
-                radial-gradient(ellipse at 50% 34%, rgba(255, 255, 255, 0.75), transparent 38%),
-                linear-gradient(155deg, #dce8df 0%, #cbd9ce 50%, #b8cdbd 100%);
+                radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.9), transparent 38%),
+                linear-gradient(155deg, #e6f1ff 0%, #cbdff8 55%, #a9c9f0 100%);
         }
 
         .hero-art::before,
@@ -233,55 +233,55 @@
             right: -25px;
             bottom: 0;
             left: -25px;
-            height: 34%;
+            height: 32%;
             border-radius: 50% 50% 0 0;
-            background: rgba(62, 110, 75, 0.22);
+            background: rgba(72, 131, 203, 0.22);
             content: "";
         }
 
         .hero-art::after {
-            right: -75px;
+            right: -70px;
             left: 28%;
-            height: 23%;
-            background: rgba(37, 87, 57, 0.3);
+            height: 22%;
+            background: rgba(38, 91, 165, 0.22);
         }
 
         .campus {
             position: relative;
             z-index: 1;
             width: min(88%, 450px);
-            margin-top: 40px;
-            filter: drop-shadow(0 20px 20px rgba(32, 54, 39, 0.12));
+            margin-top: 34px;
+            filter: drop-shadow(0 20px 20px rgba(32, 54, 90, 0.12));
         }
 
         .art-caption {
             position: absolute;
             z-index: 2;
             right: 20px;
-            bottom: 20px;
+            bottom: 18px;
             left: 20px;
             display: flex;
             justify-content: space-between;
             gap: 12px;
-            color: #30483a;
-            font-size: 0.72rem;
+            color: #304a70;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
 
         .welcome-strip {
-            background: var(--green);
-            color: white;
+            background: var(--navy);
+            color: var(--white);
         }
 
         .welcome-inner {
             display: grid;
             grid-template-columns: 1fr auto;
             align-items: center;
-            gap: 32px;
-            padding-top: 27px;
-            padding-bottom: 27px;
+            gap: 24px;
+            padding-top: 26px;
+            padding-bottom: 26px;
         }
 
         .welcome-inner p {
@@ -291,26 +291,27 @@
         }
 
         .welcome-inner span {
-            color: #d6bd83;
-            font-size: 0.75rem;
+            color: #c9ddf8;
+            font-size: 0.74rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
         .section {
-            padding-top: 96px;
-            padding-bottom: 96px;
+            padding-top: 88px;
+            padding-bottom: 88px;
         }
 
         .section-heading {
             max-width: 650px;
-            margin-bottom: 38px;
+            margin-bottom: 36px;
         }
 
         .section-heading h2 {
-            margin: 13px 0 12px;
+            margin: 12px 0;
+            color: var(--navy);
             font-family: var(--serif);
-            font-size: clamp(2.2rem, 4vw, 3.35rem);
+            font-size: clamp(2.2rem, 4vw, 3.3rem);
             font-weight: 500;
             letter-spacing: -0.04em;
             line-height: 1.12;
@@ -324,17 +325,18 @@
         .about-grid {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
-            gap: 70px;
             align-items: start;
+            gap: 64px;
         }
 
         .about-note {
-            padding: 25px 26px;
-            border-left: 3px solid var(--gold);
-            background: var(--paper);
-            color: var(--green);
+            margin-bottom: 20px;
+            padding: 22px 24px;
+            border-left: 3px solid var(--sky);
+            background: var(--blue-light);
+            color: var(--navy);
             font-family: var(--serif);
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             line-height: 1.45;
         }
 
@@ -347,7 +349,7 @@
         }
 
         .courses-section {
-            background: #ecefe8;
+            background: var(--surface);
         }
 
         .course-grid {
@@ -357,44 +359,44 @@
         }
 
         .course-card {
-            min-height: 195px;
-            padding: 24px 21px;
-            border: 1px solid #dfe4dc;
-            background: var(--paper);
+            min-height: 190px;
+            padding: 23px 20px;
+            border: 1px solid var(--line);
+            background: var(--white);
             transition: transform 180ms ease, box-shadow 180ms ease;
         }
 
         .course-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 14px 28px rgba(23, 37, 31, 0.08);
+            box-shadow: 0 14px 28px rgba(23, 48, 85, 0.09);
         }
 
         .course-number {
             display: block;
-            margin-bottom: 25px;
-            color: #ad8540;
+            margin-bottom: 23px;
+            color: var(--blue);
             font-family: var(--serif);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .course-card h3 {
             margin-bottom: 8px;
+            color: var(--navy);
             font-family: var(--serif);
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.2rem;
         }
 
         .course-card p {
             margin-bottom: 0;
             color: var(--muted);
-            font-size: 0.88rem;
+            font-size: 0.87rem;
         }
 
         .contact-section {
             display: grid;
             grid-template-columns: 0.85fr 1.15fr;
-            gap: 70px;
             align-items: start;
+            gap: 60px;
         }
 
         .contact-section .section-heading {
@@ -404,15 +406,15 @@
         .contact-card {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 26px;
-            padding: 30px;
+            gap: 24px;
+            padding: 28px;
             border: 1px solid var(--line);
-            background: var(--paper);
+            background: var(--white);
         }
 
         .contact-item h3 {
-            margin-bottom: 7px;
-            color: var(--green);
+            margin-bottom: 6px;
+            color: var(--blue);
             font-size: 0.74rem;
             letter-spacing: 0.11em;
             text-transform: uppercase;
@@ -422,27 +424,27 @@
         .contact-item a {
             margin-bottom: 0;
             color: var(--muted);
-            font-size: 0.93rem;
+            font-size: 0.92rem;
             line-height: 1.7;
         }
 
         .contact-item a:hover {
-            color: var(--green);
+            color: var(--blue);
         }
 
         .sample-note {
             grid-column: 1 / -1;
             margin: 0;
-            padding-top: 15px;
+            padding-top: 14px;
             border-top: 1px solid var(--line);
             color: var(--muted);
             font-size: 0.78rem;
         }
 
         .site-footer {
-            padding: 24px 0;
-            background: #122b23;
-            color: rgba(255, 255, 255, 0.75);
+            padding: 23px 0;
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.82rem;
         }
 
@@ -459,11 +461,11 @@
         @media (max-width: 900px) {
             .hero {
                 min-height: 0;
-                gap: 30px;
+                gap: 32px;
             }
 
             .hero-art {
-                min-height: 340px;
+                min-height: 330px;
             }
 
             .course-grid {
@@ -480,20 +482,20 @@
                 min-height: 72px;
                 flex-wrap: wrap;
                 gap: 10px 18px;
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
 
             .brand-mark {
-                width: 38px;
-                height: 38px;
+                width: 39px;
+                height: 39px;
             }
 
             .navigation {
                 width: 100%;
                 justify-content: space-between;
                 gap: 12px;
-                padding-top: 7px;
+                padding-top: 8px;
                 border-top: 1px solid var(--line);
             }
 
@@ -507,7 +509,7 @@
 
             .hero {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 26px;
                 padding-top: 42px;
                 padding-bottom: 48px;
             }
@@ -517,7 +519,7 @@
             }
 
             .hero-art {
-                min-height: 310px;
+                min-height: 300px;
                 border-radius: 45% 45% 4px 4px;
             }
 
@@ -527,19 +529,19 @@
             }
 
             .section {
-                padding-top: 68px;
-                padding-bottom: 68px;
+                padding-top: 66px;
+                padding-bottom: 66px;
             }
 
             .about-grid,
             .contact-section {
                 grid-template-columns: 1fr;
-                gap: 28px;
+                gap: 26px;
             }
 
             .contact-card {
                 padding: 22px;
-                gap: 22px 16px;
+                gap: 20px 16px;
             }
 
             .footer-inner {
@@ -572,11 +574,11 @@
 <body>
     <header class="site-header">
         <div class="shell header-inner">
-            <a class="brand" href="#home" aria-label="Northstar University home">
+            <a class="brand" href="#home" aria-label="Ngoma College home">
                 <span class="brand-mark" aria-hidden="true">N</span>
                 <span>
-                    <span class="brand-name">Northstar University</span>
-                    <span class="brand-subtitle">Curiosity leads the way</span>
+                    <span class="brand-name">Ngoma College</span>
+                    <span class="brand-tagline">Learn · Grow · Lead</span>
                 </span>
             </a>
             <nav class="navigation" aria-label="Main navigation">
@@ -592,42 +594,40 @@
             <div class="hero-copy">
                 <span class="eyebrow">A place to become</span>
                 <h1 id="welcome-title">Your next chapter <span>starts here.</span></h1>
-                <p>Welcome to Northstar University, where thoughtful teaching, bold ideas, and a close-knit community help you find your way forward.</p>
-                <a class="button" href="#courses">Discover our courses <span aria-hidden="true">→</span></a>
+                <p>Welcome to Ngoma College, where dedicated teaching, fresh ideas, and a supportive community help every student find their way forward.</p>
+                <a class="button" href="#courses">Explore our courses <span aria-hidden="true">→</span></a>
             </div>
 
-            <div class="hero-art" role="img" aria-label="Illustration of the university's historic campus">
+            <div class="hero-art" role="img" aria-label="Illustration of the Ngoma College campus">
                 <svg class="campus" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <g fill="#53765d">
+                    <g fill="#356db5">
                         <path d="M37 273h426v32H37z"/>
                         <path d="M67 198h75v75H67zM358 198h75v75h-75z"/>
                         <path d="m55 198 49-36 49 36zM345 198l50-36 50 36z"/>
                         <path d="M126 152h248v121H126z"/>
                         <path d="m110 152 140-91 140 91z"/>
-                        <path d="M229 63h42V30h-42z"/>
-                        <path d="M238 31h24V12h-24z"/>
-                        <path d="M246 12h8V0h-8z"/>
+                        <path d="M229 63h42V30h-42zM238 31h24V12h-24zM246 12h8V0h-8z"/>
                         <path d="M151 174h30v99h-30zM211 174h30v99h-30zM271 174h30v99h-30zM331 174h30v99h-30z"/>
                         <path d="M232 221h36v52h-36z"/>
                     </g>
-                    <g fill="#e9e5d3">
+                    <g fill="#eaf3ff">
                         <path d="M159 184h14v22h-14zM219 184h14v22h-14zM279 184h14v22h-14zM339 184h14v22h-14z"/>
                         <path d="M242 231h16v42h-16z"/>
                     </g>
-                    <g fill="#6d8b67">
+                    <g fill="#6f9ed6">
                         <path d="M27 272c0-23 13-38 28-38s28 15 28 38zM417 272c0-25 14-42 31-42s31 17 31 42z"/>
                         <path d="M47 234v-29h16v29zM438 232v-36h17v36z"/>
                     </g>
-                    <path d="M28 306h444" stroke="#d7a64b" stroke-width="4"/>
+                    <path d="M28 306h444" stroke="#80b7f4" stroke-width="4"/>
                 </svg>
-                <div class="art-caption"><span>Ideas take root here</span><span>Est. 1892</span></div>
+                <div class="art-caption"><span>Ideas take root here</span><span>Ngoma College</span></div>
             </div>
         </section>
 
-        <section class="welcome-strip" aria-label="University welcome">
+        <section class="welcome-strip" aria-label="College welcome">
             <div class="shell welcome-inner">
-                <p>Learn deeply. Live boldly. Make a difference.</p>
-                <span>Welcome to Northstar</span>
+                <p>Learn deeply. Grow with purpose. Lead with confidence.</p>
+                <span>Welcome to Ngoma</span>
             </div>
         </section>
 
@@ -636,12 +636,12 @@
                 <div class="section-heading">
                     <span class="eyebrow">About us</span>
                     <h2 id="about-title">An education with purpose.</h2>
-                    <p>We bring people and ideas together to shape a brighter, more thoughtful future.</p>
+                    <p>At Ngoma College, we bring people and ideas together to shape a brighter future.</p>
                 </div>
                 <div class="about-copy">
                     <div class="about-note">“The best learning opens doors you didn’t know were there.”</div>
-                    <p>Northstar University is a welcoming place to explore your interests, ask big questions, and turn knowledge into meaningful action. Our dedicated faculty pair academic excellence with personal guidance, helping every student find their own path.</p>
-                    <p>On our close-knit campus, a diverse community learns together through hands-on experiences, lively discussion, and connections that last well beyond graduation.</p>
+                    <p>Ngoma College is a welcoming place to explore your interests, ask big questions, and turn knowledge into meaningful action. Our faculty pair academic learning with personal guidance, helping each student build confidence and find their own path.</p>
+                    <p>Through hands-on experiences, lively discussion, and a close-knit campus community, students develop the skills and perspective to make a difference.</p>
                 </div>
             </div>
         </section>
@@ -649,30 +649,30 @@
         <section class="courses-section" id="courses" aria-labelledby="courses-title">
             <div class="shell section">
                 <div class="section-heading">
-                    <span class="eyebrow">Explore your interests</span>
-                    <h2 id="courses-title">A course for your next big idea.</h2>
-                    <p>Start with what inspires you. Build skills that take you where you want to go.</p>
+                    <span class="eyebrow">Find your path</span>
+                    <h2 id="courses-title">Explore our courses.</h2>
+                    <p>Start with what inspires you and build skills for the future you imagine.</p>
                 </div>
                 <div class="course-grid">
                     <article class="course-card">
-                        <span class="course-number">01 / Science</span>
+                        <span class="course-number">01 / Technology</span>
                         <h3>Computer Science</h3>
-                        <p>Create technology that solves real-world problems.</p>
+                        <p>Build digital skills and create technology that solves problems.</p>
                     </article>
                     <article class="course-card">
                         <span class="course-number">02 / Business</span>
-                        <h3>Business Administration</h3>
-                        <p>Develop the insight to lead teams and ideas.</p>
+                        <h3>Business Studies</h3>
+                        <p>Learn to develop ideas, work with teams, and lead with purpose.</p>
                     </article>
                     <article class="course-card">
                         <span class="course-number">03 / Humanities</span>
-                        <h3>Psychology</h3>
-                        <p>Understand people, behavior, and the mind.</p>
+                        <h3>Education</h3>
+                        <p>Prepare to support learning and inspire future generations.</p>
                     </article>
                     <article class="course-card">
-                        <span class="course-number">04 / Creative Arts</span>
+                        <span class="course-number">04 / Environment</span>
                         <h3>Environmental Studies</h3>
-                        <p>Explore practical paths toward a more sustainable world.</p>
+                        <p>Explore practical ways to care for our communities and planet.</p>
                     </article>
                 </div>
             </div>
@@ -681,35 +681,35 @@
         <section class="shell section contact-section" id="contact" aria-labelledby="contact-title">
             <div class="section-heading">
                 <span class="eyebrow">Get in touch</span>
-                <h2 id="contact-title">We’d love to hear from you.</h2>
-                <p>Have a question about studying with us? Our admissions team is happy to help you take the next step.</p>
+                <h2 id="contact-title">Let’s talk about your future.</h2>
+                <p>Have a question about Ngoma College or our courses? Get in touch with our admissions team.</p>
             </div>
             <div class="contact-card">
                 <div class="contact-item">
                     <h3>Visit</h3>
-                    <p>100 University Avenue<br />Your City, ST 00000</p>
+                    <p>College Road<br />Your City, Your Country</p>
                 </div>
                 <div class="contact-item">
                     <h3>Call</h3>
-                    <a href="tel:+15550102040">+1 (555) 010-2040</a>
+                    <a href="tel:+000000000000">Add college phone number</a>
                 </div>
                 <div class="contact-item">
                     <h3>Email</h3>
-                    <a href="mailto:admissions@northstar.example">admissions@northstar.example</a>
+                    <a href="mailto:admissions@ngomacollege.example">admissions@ngomacollege.example</a>
                 </div>
                 <div class="contact-item">
                     <h3>Office hours</h3>
                     <p>Monday–Friday<br />9:00 a.m.–5:00 p.m.</p>
                 </div>
-                <p class="sample-note">Sample contact details for this demo—replace them with your university’s information before publishing.</p>
+                <p class="sample-note">Update the sample address, phone number, email, and office hours with Ngoma College’s official contact details.</p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="shell footer-inner">
-            <p>© 2026 Northstar University</p>
-            <p>Curiosity leads the way.</p>
+            <p>© 2026 Ngoma College</p>
+            <p>Learn · Grow · Lead</p>
         </div>
     </footer>
 </body>
